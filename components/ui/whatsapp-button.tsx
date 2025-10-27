@@ -1,8 +1,8 @@
 "use client";
 
 import type React from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "./button";
+import { cn } from "../../lib/utils";
 
 interface WhatsAppButtonProps {
   variant?: "default" | "outline" | "yellow";
@@ -18,7 +18,10 @@ export function WhatsAppButton({
   children = "WhatsApp",
 }: WhatsAppButtonProps) {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5581986181669?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações", "_blank");
+    window.open(
+      "https://wa.me/554831974041?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações",
+      "_blank"
+    );
   };
 
   const getVariantStyles = () => {

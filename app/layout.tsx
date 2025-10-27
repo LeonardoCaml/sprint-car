@@ -11,13 +11,13 @@ const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Oficina UP Bloco",
+  applicationName: "Sprintcar - Centro Automotivo",
   title: {
-    default: "Oficina UP Bloco - Mecânica Especializada em Caruaru",
-    template: "%s | Oficina UP Bloco",
+    default: "Sprintcar - Centro Automotivou",
+    template: "%s | Sprintcar - Centro Automotivo",
   },
   description:
-    "Oficina mecânica em Caruaru especializada em motores flex e diesel leve. 17 anos de experiência com serviços de chassis, suspensão, freios e muito mais.",
+    "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
   alternates: {
     canonical: siteUrl,
   },
@@ -36,25 +36,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Oficina UP Bloco",
-    title:
-      "Oficina UP Bloco — Especialistas em Mecânica Flex e Diesel em Caruaru",
+    siteName: "Sprintcar - Centro Automotivo",
+    title: "Sprintcar - Centro Automotivo",
     description:
-      "Mais de 17 anos oferecendo serviços de qualidade em motores, freios, suspensão e chassis. Confiança e experiência em Caruaru.",
+      "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
     images: [
       {
         url: "/logo.jpg",
         width: 1200,
         height: 630,
-        alt: "Oficina UP Bloco — Mecânica em Caruaru",
+        alt: "Sprintcar - Centro Automotivo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oficina UP Bloco — Mecânica Especializada em Caruaru",
+    title: "Sprintcar - Centro Automotivo",
     description:
-      "Mecânica com 17 anos de experiência em Caruaru. Especialistas em motores flex e diesel leve, freios, suspensão e muito mais.",
+      "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
     images: ["/logo.png"],
   },
   icons: {
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#C62828",
+  themeColor: "#c62865ff",
 };
 
 export default function RootLayout({
@@ -73,37 +72,37 @@ export default function RootLayout({
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    name: "Oficina UP Bloco",
+    name: "Sprintcar - Centro Automotivo",
     url: siteUrl,
     image: `${siteUrl}/logo.png`,
     description:
-      "Oficina mecânica especializada em flex e diesel leve, com 17 anos de experiência em Caruaru. Serviços de chassis, suspensão e freios.",
-    telephone: "+5581995320002",
+      "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
+    telephone: "+554831974041",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "AV CAMPINA GRANDE, N 1095, BAIRRO BOA VISTA",
-      addressLocality: "Caruaru",
-      addressRegion: "PE",
-      postalCode: "55038-228",
+      streetAddress: "Av. Coleira 834",
+      addressLocality: "Tijucas",
+      addressRegion: "SC",
+      postalCode: "88200-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -8.280417162514299,
-      longitude: -35.98345532275768,
+      latitude: -27.231265932934903,
+      longitude: -48.62082797116306,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
-        closes: "18:00",
+        closes: "12:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "12:00",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "13:30",
+        closes: "18:30",
       },
     ],
     priceRange: "$$",

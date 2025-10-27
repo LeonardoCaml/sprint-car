@@ -1,11 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { Card, CardContent } from "../components/ui/card";
+import { WhatsAppButton } from "../components/ui/whatsapp-button";
 import {
   HandshakeIcon,
-  MessageCircle,
   ShieldCheck,
   Users,
   MapPin,
@@ -20,7 +18,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "../components/ui/accordion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,120 +27,138 @@ import Image from "next/image";
 export default function Home() {
   const services = [
     {
-      title: "Desempeno de Chassis",
+      title: "Câmbio Automático",
       description:
-        "Correção precisa para danos estruturais, garantindo segurança e dirigibilidade.",
+        "Cuide do câmbio automático com manutenção especializada para garantir segurança e durabilidade.",
       image: "/service1.png",
-    },
-    {
-      title: "Mecânica em Geral (Flex/Diesel Leve)",
-      description:
-        "Manutenção e reparos especializados para veículos Flex e Diesel Leve.",
-      image: "/service2.png",
-    },
-    {
-      title: "Revisão Preventiva e Corretiva",
-      description:
-        "Revisões completas para prevenir falhas ou resolver rapidamente problemas existentes.",
-      image: "/service3.png",
-    },
-    {
-      title: "Desempeno de Eixo Traseiro",
-      description:
-        "Correção de eixo traseiro deformado, melhorando estabilidade e segurança.",
-      image: "/service4.png",
-    },
-    {
-      title: "Suspensão Flex/Diesel Leve",
-      description:
-        "Serviços especializados em suspensão, garantindo conforto e segurança ao dirigir.",
-      image: "/service5.png",
-    },
-    {
-      title: "Freios",
-      description:
-        "Reparos e manutenção que garantem frenagens seguras e precisas.",
-      image: "/service6.png",
-    },
-    {
-      title: "Sistema de Arrefecimento",
-      description:
-        "Manutenção para evitar superaquecimentos e preservar o motor do seu veículo.",
-      image: "/service7.png",
-    },
-    {
-      title: "Alinhamento e Balanceamento",
-      description:
-        "Ajuste das rodas para maior segurança, estabilidade e economia dos pneus.",
-      image: "/service8.png",
     },
     {
       title: "Troca de Óleo",
       description:
-        "Troca ágil e segura do óleo e filtro, prolongando a vida útil do motor.",
+        "Lubrificação de qualidade para proteger o motor e garantir máxima performance. Seu carro rodando com segurança e eficiência!",
+      image: "/service2.png",
+    },
+    {
+      title: "Mecânica Geral",
+      description:
+        "Manutenção completa para garantir o desempenho e segurança do seu veículo.",
+      image: "/service3.png",
+    },
+    {
+      title: "Injeção Eletrônica",
+      description:
+        "Diagnóstico preciso para melhorar o desempenho e a economia de combustível do seu veículo. Evite falhas e garanta uma condução mais eficiente!",
+      image: "/service4.png",
+    },
+    {
+      title: "Remap",
+      description:
+        "Aumente a potência, otimize o consumo de combustível e melhore a dirigibilidade com um remapeamento de alto desempenho.",
+      image: "/service5.png",
+    },
+    {
+      title: "Suspensão e Freios",
+      description:
+        "Mais conforto, estabilidade e segurança na direção! Revisamos amortecedores, molas, pastilhas e discos para um desempenho impecável.",
+      image: "/service6.png",
+    },
+    {
+      title: "Ar Condicionado Automotivo",
+      description:
+        "Realizamos a manutenção completa do seu ar-condicionado para garantir eficiência, conforto e qualidade do ar dentro do seu carro.",
+      image: "/service7.png",
+    },
+    {
+      title: "Polimento técnico + higienização de banco de couro",
+      description:
+        "Deixe seu carro com aparência de novo com nosso polimento técnico e a higienização profunda dos bancos de couro.",
+      image: "/service8.png",
+    },
+    {
+      title: "Higienização de estofado",
+      description:
+        "Seu carro mais limpo e saudável com nossa higienização profunda de estofados. Conforto e bem-estar garantidos!",
       image: "/service9.png",
+    },
+    {
+      title: "Manutenção Cabeçote",
+      description:
+        "Evite falhas e garanta o funcionamento perfeito do motor com nossa manutenção especializada no cabeçote.",
+      image: "/service10.png",
+    },
+    {
+      title: "Alinhamento/ Balanceamento",
+      description:
+        "Direção precisa e pneus conservados com alinhamento e balanceamento perfeitos.",
+      image: "/service11.png",
     },
   ];
 
   const benefits = [
     {
-      title: "Experiência Comprovada",
-      description:
-        "Mais de 17 anos de atuação com serviços automotivos especializados.",
-      icon: ShieldCheck,
+      title: "9 anos de experiência",
+      description: "Profissionais especializados para cuidar do seu carro.",
+      icon: HandshakeIcon,
     },
     {
-      title: "Transparência",
-      description: "Comunicação clara e serviços realizados com integridade.",
+      title: "Serviços completos",
+      description: "Da manutenção ao polimento, tudo em um só lugar.",
       icon: Users,
     },
     {
-      title: "Pontualidade Garantida",
-      description:
-        "Respeito ao seu tempo, com entrega ágil e dentro do prazo prometido.",
-      icon: HandshakeIcon,
+      title: "Qualidade garantida",
+      description: "Peças e equipamentos de alto padrão.",
+      icon: ShieldCheck,
     },
   ];
 
   const comments = [
     {
-      name: "Leonardo Silva",
-      text: "O atendimento da UPBLOCO é diferenciado. Resolveram o problema do meu carro rapidamente, explicaram tudo com clareza e mostraram total transparência. Recomendo demais!",
+      name: "Ana Luiza Ferreira",
+      text: "Serviço impecável! Trouxe meu carro com um problema no motor e eles resolveram tudo no mesmo dia. Atendimento rápido e transparente, recomendo demais!",
     },
     {
-      name: "Marcos Rodrigues",
-      text: "Impressionada com a pontualidade e a honestidade dessa oficina. A equipe é super atenciosa e os serviços são feitos com muita competência. Já virei cliente fiel!",
+      name: "Carlos Eduardo Santos",
+      text: "Oficina de confiança! Explicaram cada detalhe do conserto e me passaram o orçamento antes de qualquer coisa. Excelente custo-benefício.",
     },
     {
-      name: "Rodrigo Almeida",
-      text: "A UPBLOCO é, sem dúvida, a melhor oficina da região. Profissionais capacitados, atendimento excelente e confiança total no serviço prestado. Vale muito a pena!",
+      name: "Patrícia Moura",
+      text: "Fiquei muito satisfeita com a revisão completa que fizeram no meu carro. Atendimento super profissional e preço justo. Voltarei com certeza!",
+    },
+    {
+      name: "João Henrique Silva",
+      text: "Levei meu carro para balanceamento e alinhamento. Serviço rápido, eficiente e com ótima estrutura. Dá pra ver que se preocupam com o cliente.",
+    },
+    {
+      name: "Fernanda Lopes",
+      text: "Equipe muito atenciosa e qualificada. Fizeram a troca de embreagem do meu carro e o resultado ficou perfeito. Super recomendo a oficina!",
     },
   ];
 
   const faqs = [
     {
-      question: "Quais são os horários de atendimento?",
+      question: "Quais serviços a SprintCar oferece?",
       answer:
-        "Atendemos de segunda a sexta-feira, das 08h às 18h. Aos sábados, das 08h às 12h. Feriados e domingos, a oficina permanece fechada.",
+        "A SprintCar oferece manutenção preventiva e corretiva, troca de óleo, freios, suspensão, alinhamento e balanceamento, diagnóstico eletrônico, reparos mecânicos e muito mais. Nosso objetivo é garantir que seu carro esteja sempre seguro e em ótimo funcionamento!",
     },
     {
-      question: "Preciso agendar antes ou posso ir diretamente à oficina?",
+      question: "Preciso agendar um horário para atendimento?",
       answer:
-        "Você pode vir diretamente, mas recomendamos o agendamento para evitar esperas e garantir um atendimento mais rápido e organizado.",
+        "Não é obrigatório, mas recomendamos! Assim, garantimos um atendimento mais rápido e sem espera. Você pode vir direto à oficina, mas se preferir comodidade, agende um horário conosco.",
     },
     {
-      question: "O que é revisão preventiva e por que ela é importante?",
+      question: "Vocês trabalham com todas as marcas de veículos?",
       answer:
-        "A revisão preventiva é uma checagem geral do veículo para identificar e corrigir possíveis problemas antes que se tornem falhas graves. Isso aumenta a segurança, evita gastos maiores e prolonga a vida útil do seu carro.",
+        "Sim! Nossa equipe está preparada para atender carros de todas as marcas e modelos, nacionais e importados, sempre com equipamentos modernos e peças de qualidade.",
     },
     {
-      question: "Quais são os principais diferenciais da UPBLOCO?",
+      question: "Como faço para agendar um atendimento?",
       answer:
-        "Aqui na UPBLOCO, unimos tecnologia de ponta, equipe especializada e atendimento transparente. Trabalhamos com equipamentos modernos, diagnóstico preciso e foco total na sua segurança e satisfação.",
+        "É fácil! Você pode agendar pelo WhatsApp, telefone ou diretamente em nossa oficina. Entre em contato e escolha o melhor horário para você!",
     },
   ];
 
-  const whatsappNumber = "5581995320002"; // Replace with actual number
+  const whatsappNumber = "554831974041"; // Replace with actual number
   const whatsappMessage = encodeURIComponent(
     "Olá! Gostaria de saber mais sobre os serviços."
   );
@@ -167,14 +183,16 @@ export default function Home() {
 
             <div className="block md:hidden h-72" />
 
-            {/* Ajuste de margem reduzida no mobile */}
+            {/* Ajuste de margem pinkuzida no mobile */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight text-balance mt-5 sm:mt-20 md:mt-5">
-              Segurança e Excelência para seu veículo
+              Seu carro em boas mãos: Qualidade, Transparência e Atendimento
+              Exclusivo
             </h1>
 
             <p className="text-zinc-300 text-base sm:text-md leading-relaxed max-w-md mx-auto md:mx-0">
-              Somos especializados em Mecânica geral flex e diesel leve com 17
-              anos de experiência em Caruaru.
+              A SprintCar oferece serviços completos para manter seu carro
+              seguro e em perfeitas condições. Atendimento especializado para
+              quem valoriza excelência e confiança.
             </p>
 
             <div className="flex justify-center md:justify-start">
@@ -193,12 +211,12 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-[url('/ServicesSection.png')] py-16">
+      <section className="bg-[url('/ServiceSection.png')] bg-cover py-16">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-block bg-white rounded-full px-6 py-2 mb-4">
-              <span className="text-[#FF0000] font-semibold">Serviços</span>
+              <span className="text-pink-500 font-semibold">Serviços</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Conheça nossos serviços
@@ -206,11 +224,11 @@ export default function Home() {
           </div>
 
           {/* Services Grid */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="bg-white overflow-hidden hover:shadow-2xl transition-shadow flex flex-col"
+                className="bg-white w-72 overflow-hidden hover:shadow-2xl transition-shadow flex flex-col"
               >
                 <CardContent className="p-4 flex flex-col h-full">
                   {/* Imagem */}
@@ -253,11 +271,11 @@ export default function Home() {
       </section>
 
       {/* Seção de benefícios */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-pink-500 py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-5 text-center mb-12">
             <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
-              Por que Escolher a UPBLOCO?
+              Por que Escolher a SprintCar?
             </h1>
             <p className="text-base sm:text-lg max-w-3xl text-gray-400">
               Experiência, confiança e preço justo para cuidar do seu veículo
@@ -272,7 +290,7 @@ export default function Home() {
               return (
                 <Card key={index} className="bg-gray-100 border-0">
                   <CardContent className="flex flex-col justify-between h-full p-6 text-center items-center">
-                    <IconComponent className="h-10 w-10 text-red-600 mb-4" />
+                    <IconComponent className="h-10 w-10 text-pink-500 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {item.title}
                     </h3>
@@ -293,18 +311,16 @@ export default function Home() {
 
       <section
         id="about"
-        className="relative bg-[url('/AboutSectionMobile.png')] md:bg-[url('/AboutSection.png')] bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-6 py-16 md:py-24"
+        className="relative bg-[url('/AboutSectionMobile.png')] md:bg-[url('/AboutSection.png')] bg-cover bg-center md:bg-right bg-no-repeat min-h-screen flex items-center px-6 py-16 md:py-24"
       >
         <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Espaço reservado para imagem (coluna da esquerda no desktop) */}
           <div className="block h-64" />
 
-          {/* Texto e botão */}
-          <div className="max-w-md flex flex-col gap-6 text-center md:text-left text-zinc-800">
+          <div className="max-w-md flex flex-col gap-6 text-center md:text-left text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Sobre a UPBLOCO
             </h1>
-            <p className="text-base sm:text-md text-zinc-700 leading-relaxed">
+            <p className="text-base sm:text-md text-gray-400 leading-relaxed">
               Com mais de 17 anos em Caruaru, a UPBLOCO Oficina Automotiva é
               referência em mecânica flex e diesel, destacando-se pela
               excelência, honestidade e pontualidade nos serviços prestados.
@@ -324,7 +340,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex flex-col md:flex-row items-center justify-evenly px-12 md:px-32 h-56 lg:h-36 bg-red-600">
+      <div className="flex flex-col md:flex-row items-center justify-evenly px-12 md:px-32 h-56 lg:h-36 bg-pink-500">
         <h1 className="max-w-xl text-3xl sm:text-4xl lg:text-3xl text-white text-center md:text-start font-bold">
           Entre em contato e seja atendido por um especialista agora mesmo
         </h1>
@@ -391,12 +407,12 @@ export default function Home() {
         </div>
 
         {/* CTA Final */}
-        <div className="max-w-6xl mx-auto mt-16 px-6 py-10 flex flex-col lg:flex-row items-center justify-evenly gap-6 rounded-2xl bg-zinc-800">
+        <div className="max-w-6xl mx-auto mt-16 px-6 py-10 flex flex-col lg:flex-row items-center justify-around gap-6 rounded-2xl bg-pink-500">
           <div className="text-center lg:text-left max-w-lg">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Não perca tempo!
             </h1>
-            <p className="text-lg md:text-xl text-zinc-400">
+            <p className="text-lg md:text-xl text-zinc-300">
               Agende agora e garanta a manutenção que seu carro merece com
               praticidade e confiança.
             </p>
@@ -446,7 +462,7 @@ export default function Home() {
               <li>
                 <a
                   href="#home"
-                  className="hover:text-red-500 transition-colors"
+                  className="hover:text-pink-500 transition-colors"
                 >
                   Home
                 </a>
@@ -454,7 +470,7 @@ export default function Home() {
               <li>
                 <a
                   href="#services"
-                  className="hover:text-red-500 transition-colors"
+                  className="hover:text-pink-500 transition-colors"
                 >
                   Serviços
                 </a>
@@ -462,7 +478,7 @@ export default function Home() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-red-500 transition-colors"
+                  className="hover:text-pink-500 transition-colors"
                 >
                   Sobre nós
                 </a>
@@ -470,13 +486,16 @@ export default function Home() {
               <li>
                 <a
                   href="#testimonials"
-                  className="hover:text-red-500 transition-colors"
+                  className="hover:text-pink-500 transition-colors"
                 >
                   Clientes
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#faq"
+                  className="hover:text-pink-500 transition-colors"
+                >
                   FAQ
                 </a>
               </li>
@@ -488,27 +507,20 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-4 text-white">Contato</h3>
             <div className="space-y-4 text-zinc-300">
               <div className="flex items-start justify-center sm:justify-start gap-3">
-                <MapPin className="h-5 w-5 mt-1 text-red-500 flex-shrink-0" />
-                <p className="max-w-xs">
-                  AV CAMPINA GRANDE, NÚMERO 1.095, CEP 55.038-228, BAIRRO BOA
-                  VISTA, MUNICÍPIO DE CARUARU - PE
-                </p>
+                <MapPin className="h-5 w-5 mt-1 text-pink-500 flex-shrink-0" />
+                <p className="max-w-xs">Av. Coleira 834, Tijucas 88200-000</p>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-3">
-                <Phone className="h-5 w-5 text-red-500 flex-shrink-0" />
-                <p>(81) 9 9532-0002</p>
+                <Phone className="h-5 w-5 text-pink-500 flex-shrink-0" />
+                <p>(48) 3197-4041</p>
               </div>
               <div className="flex items-start justify-center sm:justify-start gap-3">
-                <Mail className="h-5 w-5 mt-1 text-red-500 flex-shrink-0" />
-                <p>upblocomkt@gmail.com</p>
+                <Mail className="h-5 w-5 mt-1 text-pink-500 flex-shrink-0" />
+                <p>sprintcarmkt@gmail.com</p>
               </div>
               <div className="flex items-start justify-center sm:justify-start gap-3">
-                <Clock className="h-5 w-5 mt-1 text-red-500 flex-shrink-0" />
-                <p>Seg - Sex: 08:00 - 18:00</p>
-              </div>
-              <div className="flex items-start justify-center sm:justify-start gap-3">
-                <Clock className="h-5 w-5 mt-1 text-red-500 flex-shrink-0" />
-                <p>Sábado: 08:00 - 12:00</p>
+                <Clock className="h-5 w-5 mt-1 text-pink-500 flex-shrink-0" />
+                <p>Seg - Sex: 08:00 às 12:00 | 13:30 às 18:30</p>
               </div>
             </div>
           </div>
@@ -533,7 +545,7 @@ export default function Home() {
 
         {/* Footer Bottom */}
         <div className="border-t border-zinc-800 mt-10 pt-6 text-center text-sm text-zinc-500">
-          © {new Date().getFullYear()} UpBloco Oficina MKT — Todos os direitos
+          © {new Date().getFullYear()} SprintCar Oficina MKT — Todos os direitos
           reservados.
         </div>
       </footer>
