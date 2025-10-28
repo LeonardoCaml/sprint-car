@@ -1,7 +1,18 @@
 import type React from "react";
+
 import type { Metadata, Viewport } from "next";
+
 import { Inter } from "next/font/google";
+
 import { Analytics } from "@vercel/analytics/next";
+
+import { Suspense } from "react";
+
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoScript,
+} from "@/components/google-tag-manager";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -42,7 +53,7 @@ export const metadata: Metadata = {
       "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sprintcar - Centro Automotivo",
@@ -54,11 +65,11 @@ export const metadata: Metadata = {
     title: "Sprintcar - Centro Automotivo",
     description:
       "A SprintCar oferece serviços completos para manter seu carro seguro e em perfeitas condições. Atendimento especializado para quem valoriza excelência e confiança.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "any" }],
-    shortcut: ["/favicon.png"],
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    shortcut: ["/favicon.ico"],
   },
 };
 
@@ -69,6 +80,15 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const org = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Sprintcar - Centro Automotivo",
+    url: siteUrl,
+    logo: `${siteUrl}/og-image.png`,
+    image: `${siteUrl}/og-image.png`,
+  };
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -132,13 +152,21 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <GoogleTagManager gtmId="GTM-TJV2S238" />
+      </head>
+      <body
+        className={`${inter.className} font-sans antialiased overflow-x-hidden`}
+      >
+        <GoogleTagManagerNoScript gtmId="GTM-TJV2S238" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
         />
-      </head>
-      <body className={`${inter.className} antialiased`}>
-        {children}
+        <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
     </html>
