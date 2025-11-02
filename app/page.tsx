@@ -318,14 +318,13 @@ export default function Home() {
 
           <div className="max-w-md flex flex-col gap-6 text-center md:text-left text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Sobre a UPBLOCO
+              Sobre a SprintCar
             </h1>
             <p className="text-base sm:text-md text-gray-400 leading-relaxed">
-              Com mais de 17 anos em Caruaru, a UPBLOCO Oficina Automotiva é
-              referência em mecânica flex e diesel, destacando-se pela
-              excelência, honestidade e pontualidade nos serviços prestados.
-              Aqui, seu veículo recebe cuidado especializado com total confiança
-              e segurança.
+              A SprintCar é uma oficina especializada em manutenção automotiva,
+              com 9 anos de experiência no mercado. Nossa missão é oferecer
+              serviços de alta qualidade, com transparência, atendimento
+              diferenciado e compromisso com a segurança do seu veículo.
             </p>
 
             <div className="flex justify-center md:justify-start mt-2">
@@ -353,7 +352,7 @@ export default function Home() {
       </div>
 
       <section id="testimonials" className="bg-white mx-auto px-4 py-16">
-        <div className="container flex flex-col items-center">
+        <div className="flex flex-col items-center">
           {/* Título */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -386,7 +385,7 @@ export default function Home() {
               {comments.map((card, index) => (
                 <SwiperSlide key={index}>
                   <div className="flex justify-center h-full">
-                    <Card className="w-full max-w-sm h-full shadow-md bg-white border border-zinc-200 hover:shadow-lg transition-shadow mb-10">
+                    <Card className="w-full max-w-sm h-full md:min-h-72 shadow-md bg-white border border-zinc-200 hover:shadow-lg transition-shadow mb-10">
                       <CardContent className="flex flex-col h-68 items-center justify-between p-6">
                         <p className="text-gray-700 text-center leading-relaxed line-clamp-5">
                           {card.text}
@@ -532,7 +531,7 @@ export default function Home() {
             </h3>
             <div className="rounded-lg overflow-hidden shadow-lg border border-zinc-700">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15792.731981492012!2d-35.983112!3d-8.284579!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98b9655b30387%3A0x9f6ded4c0e6e7f5c!2sAv.%20Campina%20Grande%2C%201%20-%20Centen%C3%A1rio%2C%20Caruaru%20-%20PE%2C%2055006-145%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1761414123504!5m2!1spt-BR!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.610971521088!2d-48.62341362554502!3d-27.23136130659127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8a96af052bdc3%3A0x2e96ced67231dacd!2sAv.%20Coleira%2C%20834%20-%20Pra%C3%A7a%2C%20Tijucas%20-%20SC%2C%2088200-000!5e0!3m2!1spt-BR!2sbr!4v1762106557405!5m2!1spt-BR!2sbr"
                 className="w-full h-64 sm:h-56 md:h-48 lg:h-56"
                 style={{ border: 0 }}
                 loading="lazy"
