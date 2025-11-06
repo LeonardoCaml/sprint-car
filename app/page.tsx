@@ -277,7 +277,7 @@ export default function Home() {
             <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
               Por que Escolher a SprintCar?
             </h1>
-            <p className="text-base sm:text-lg max-w-3xl text-gray-400">
+            <p className="text-base sm:text-lg max-w-3xl text-gray-300">
               Experiência, confiança e preço justo para cuidar do seu veículo
               como ele merece.
             </p>
